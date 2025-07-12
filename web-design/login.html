@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/ubroker_logo.png">
+    <title>UBroker web tool</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous">
+    </script>
+
+    <header class="container-fluid bg-secondary d-flex p-2">
+      <img src="img/ubroker_logo.png" alt="UBroker web tool" width="64" height="64" class="d-inline-block">
+      <p class="w-50 m-1 p-2 text-light fs-5 fw-bold">UBroker - web tool -</p>
+      <p class="w-50 m-1 p-2 text-white fs-6 text-end">---</p>
+    </header>
+
+    <main>
+      <div class="container-bluid pt-3">
+        <div class="row">
+          <div class="col-2">
+            <ul class="nav nav-pills flex-column">
+
+            <li class="nav-item">
+
+              <a class="nav-link w-75 active" href="/auth/login">Log-In</a>
+
+            </li>
+          </ul>
+          </div>
+          <div class="col-10">
+            <!-- Main content - login form -->
+
+            <div class="w-75">
+              <div class="row h1 p-5 justify-content-center">
+                - UBroker login -
+              </div>
+
+              <div class="row justify-content-center">
+                <form class="form-signin w-50" method="post">
+
+                  <div class="input-group mb-3">
+                      <span class="input-group-text" id="username">Username</span>
+                      <input type="text" name="username" id="username" class="form-control"
+                            placeholder="ES domain username"
+                            aria-label="Username" required autofocus>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="password">Password</span>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" aria-label="Password" required>
+                  </div>
+                  <div class="container justify-content-center">
+                    <button class="btn btn-sm btn-primary btn-block" type="submit">Log in</button>
+                  </div>
+                </form>
+              </div>
+
+
+              <div class="row h7 text-secondary p-3 justify-content-center">
+                login type: ---
+              </div>
+            </div>
+
+            <!-- End Main content -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-body-tertiary mt-4 py-3">
+      <div class="container">
+        <a href="https://github.com/rantonmo/ubroker" onclick="window.open(this.href, '_blank'); return false;" class="text-decoration-none">
+          <span class="text-muted">UBroker github project</span>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+
+    <div class="modal" id="msgModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Login Error</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <ul>
+                      <li>ERROR 999: login failure - login type simple</li>
+                  </ul>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      var myModal = new bootstrap.Modal(document.getElementById("msgModal"), {});
+      document.onreadystatechange = function () {
+          myModal.show();
+      };
+  </script>
+  <!-- End Modal Block-->
+
+
+  </body>
+</html>
