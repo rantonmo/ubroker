@@ -6,9 +6,9 @@ import yaml
 
 from flask import Flask
 
-from .lib.error_handlers import *
+from .libs.error_handlers import *
 
-from .bp import main
+from .libs.bp import main
 
 def create_app():
     app = Flask(__name__)
