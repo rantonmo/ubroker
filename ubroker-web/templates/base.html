@@ -42,12 +42,16 @@
           {% endblock %}
         <!-- end main content -->
         </div>
+
+        <div class="col pt-3 pe-3">
+        <!-- helpers and descriptions-->
+          {% block helpers %}
+          {% endblock %}
+        <!-- end helpers and descriptions-->
+        </div>
       </div>
     </div>
-
     <!-- Footer -->
     {% include "include/footer.html" %}
-
   </body>
 </html>
-
