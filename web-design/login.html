@@ -23,8 +23,12 @@
     <header class="container-fluid bg-secondary d-flex p-2">
       <img src="img/ubroker_logo.png" alt="UBroker web tool" width="64" height="64" class="d-inline-block">
       <p class="w-50 m-1 p-2 text-light fs-5 fw-bold">UBroker - web tool -</p>
-      <p class="w-50 m-1 p-2 text-white fs-6 text-end">---</p>
+      <p class="w-50 m-1 p-2 text-white fs-6 text-end">rmoreno log-out</p>
     </header>
+
+    <!-- separator line -->
+    <div class="container-fluid bg-dark d-flex p-2"></div>
+    <!-- end separator -->
 
     <main>
       <div class="container-bluid pt-3">
@@ -79,17 +83,20 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer bg-body-tertiary mt-4 py-3">
+    <footer class="footer mt-4 py-3 bg-body-tertiary">
       <div class="container">
-        <a href="https://github.com/rantonmo/ubroker" onclick="window.open(this.href, '_blank'); return false;" class="text-decoration-none">
-          <span class="text-muted">UBroker github project</span>
-        </a>
+          <p class="text-center">
+            <a href="#" class="text-decoration-none pe-2"><span class="text-muted">UBroker Documentation</a></span>|
+            <a href="https://github.com/rantonmo/ubroker" onclick="window.open(this.href, '_blank'); return false;"
+               class="text-decoration-none"><span class="text-muted">ubroker on github</span>
+            </a>
+          </p>
       </div>
     </footer>
 
     <!-- Modal -->
 
-    <div class="modal" id="msgModal" tabindex="-1" role="dialog">
+    <!--div class="modal" id="msgModal" tabindex="-1" role="dialog">
       <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-header">
@@ -106,7 +113,7 @@
               </div>
           </div>
       </div>
-  </div>
+  </div-->
 
   <script>
       var myModal = new bootstrap.Modal(document.getElementById("msgModal"), {});
