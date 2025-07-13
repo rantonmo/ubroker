@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block metatags %}
+<title>UBroker - Rules</title>
+<meta name="description" content="UBroker - Summary">
+{% endblock %}
+
+{% block contents %}
+<h1 class="text-center text-secondary tw-bold mb-4">Rule list</h1>
+<table class="table w-75">
+  <thead>
+    <tr>
+      <th scope="col">Company</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date</th>
+      <th scope="col">Limits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Company 1</th>
+      <td><span class="badge bg-success">good</span></td>
+      <td><span class="badge bg-secondary">today</span></td>
+      <td>1111</td>
+    </tr>
+    <tr>
+      <th scope="row">Company 2</th>
+      <td><span class="badge bg-warning">medium</span></td>
+      <td><span class="badge bg-secondary">yesterday</span></td>
+      <td>22222</td>
+    </tr>
+    <tr>
+      <th scope="row">Company 3</th>
+      <td><span class="badge bg-danger">bad</span></td>
+      <td><span class="badge bg-secondary">tomorrow</span></td>
+      <td>3333</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
+
+
+{% block helpers %}
+<h4 class="text-secondary tw-bold">Some help below</h1>
+<ul class="list-group">
+  <li class="list-group-item">An item</li>
+  <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">{{ test_var }}</li>
+  <li class="list-group-item">
+    And a fifth one
+    <span class="badge text-bg-primary rounded-pill">14</span>
+  </li>
+</ul>
+{% endblock %}
