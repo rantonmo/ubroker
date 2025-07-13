@@ -1,0 +1,8 @@
+# https://www.codeac.io/documentation/pylint-configuration.html
+
+[MAIN]
+
+disable=
+    missing-function-docstring,
+    missing-module-docstring,
+    missing-module-docstring
