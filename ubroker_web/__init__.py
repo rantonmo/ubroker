@@ -15,7 +15,7 @@ def create_app():
         SECRET_KEY=os.environ['SESSION_SECRET'],
     )
     # logging config
-    with open(os.path.join(app.instance_path, 'logging.yaml')) as lcf:
+    with open(os.path.join(app.instance_path, 'logging.yaml'), encoding='utf-8') as lcf:
         logging.config.dictConfig(yaml.safe_load(lcf.read()))
     logger = logging.getLogger("init")
 

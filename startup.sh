@@ -8,4 +8,4 @@ then
     exit 1
 fi
 
-SESSION_SECRET='123HELLO' gunicorn --bind=0.0.0.0 --timeout 600 "ubroker-web:create_app()"
+SESSION_SECRET='123HELLO' gunicorn --bind=0.0.0.0 --timeout 600 "ubroker_web:create_app()"

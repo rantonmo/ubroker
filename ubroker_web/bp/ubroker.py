@@ -1,4 +1,3 @@
-from flask import current_app
 from flask import Blueprint, render_template
 
 from ..lib.utils import set_menu
