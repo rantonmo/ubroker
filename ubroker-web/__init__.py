@@ -34,5 +34,5 @@ def create_app():
     app.register_error_handler(500, handle_error)
     app.register_error_handler(404, handle_error)
 
-    logger.info("app ready... starting...")
+    logger.info("ubroker app ready... starting...")
     return app
