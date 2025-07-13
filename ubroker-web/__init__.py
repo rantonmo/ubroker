@@ -6,7 +6,7 @@ import yaml
 
 from flask import Flask
 
-from .libs.error_handlers import *
+from .libs.error_handlers import handle_error
 
 from .libs.bp import main
 
@@ -33,8 +33,8 @@ def create_app():
     app.register_blueprint(main.bp)
 
     logger.info("registering error handlers")
-    app.register_error_handler(500, error_500)
-    app.register_error_handler(404, error_404)
+    app.register_error_handler(500, handle_error)
+    app.register_error_handler(404, handle_error)
 
     logger.info("app ready... starting...")
     return app
