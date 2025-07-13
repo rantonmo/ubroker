@@ -1,7 +1,7 @@
 from flask import current_app
 from flask import Blueprint, render_template
 
-bp = Blueprint('bl_main', __name__)
+bp = Blueprint('bl_ubroker', __name__)
 
 @bp.route('/')
 @bp.route('/index')
