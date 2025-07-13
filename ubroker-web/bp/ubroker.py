@@ -14,7 +14,7 @@ def summary():
 @bp.route('/monitors')
 def monitors():
     mc = set_menu('monitors')
-    return render_template('index.html', mc=mc)
+    return render_template('monitors.html', mc=mc)
 
 @bp.route('/rules')
 def rules():
