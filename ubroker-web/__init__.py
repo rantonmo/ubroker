@@ -6,9 +6,8 @@ import yaml
 
 from flask import Flask
 
-from .libs.error_handlers import handle_error
-
-from .libs.bp import main
+from .library.error_handlers import handle_error
+from .blueprints import main
 
 def create_app():
     app = Flask(__name__)
@@ -20,13 +19,13 @@ def create_app():
         logging.config.dictConfig(yaml.safe_load(lcf.read()))
     logger = logging.getLogger("init")
 
-    # config_file = "config.yaml"
-    # logger.info("reading app config from file %s", config_file)
-    # app.config.from_file(config_file, load=yaml.safe_load)
+    config_file = "config.yaml"
+    if not os.path.isfile(os.path.join(app.instance_path, config_file)):
+        logger.error("Config file %s not found", config_file)
+        raise RuntimeError(f"No config file found: {config_file}")
 
-    # if not os.path.isfile(os.path.join(app.instance_path, config_file)):
-    #     logger.error("Config file %s not found", config_file)
-    #     raise RuntimeError(f"No config file found: {config_file}")
+    logger.info("reading app config from file %s", config_file)
+    app.config.from_file(config_file, load=yaml.safe_load)
 
 
     logger.info("registering main blueprints")
